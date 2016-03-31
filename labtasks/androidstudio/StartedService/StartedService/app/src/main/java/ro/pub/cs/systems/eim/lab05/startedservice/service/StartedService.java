@@ -9,9 +9,12 @@ import ro.pub.cs.systems.eim.lab05.startedservice.general.Constants;
 
 public class StartedService extends Service {
 
+    private ProcessingThread processingThread;
+
     @Override
     public void onCreate() {
         super.onCreate();
+        processingThread = new ProcessingThread(this.getApplicationContext());
         Log.d(Constants.TAG, "onCreate() method was invoked");
     }
 
@@ -19,6 +22,7 @@ public class StartedService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d(Constants.TAG, "onStartCommand() method was invoked");
         // TODO: exercise 5 - implement and start the ProcessingThread
+        processingThread.start();
         return START_REDELIVER_INTENT;
     }
 

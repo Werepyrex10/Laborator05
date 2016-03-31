@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public interface Constants {
 
-    final public static String TAG = "[Started Service]";
+    final public static String TAG = "Started_Service";
 
     final public static String ACTION_STRING = "ro.pub.cs.systems.eim.lab05.startedservice.string";
     final public static String ACTION_INTEGER = "ro.pub.cs.systems.eim.lab05.startedservice.integer";
